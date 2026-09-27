@@ -1,0 +1,1341 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* =====================================================
+   ESTRUTURA PRINCIPAL
+   ===================================================== */
+
+.portfolio {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/* =====================================================
+   MENU LATERAL
+   ===================================================== */
+
+.sidebar {
+    width: 25%;
+    min-height: 100vh;
+    background: linear-gradient( 180deg, #f5b6d2 0%, #eca1c4 100% );
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+/* =====================================================
+   FOTO
+   ===================================================== */
+
+.foto-container {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+    .foto-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
+/* =====================================================
+   NOME DO PORTFÓLIO
+   ===================================================== */
+
+.nome {
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   MENU
+   ===================================================== */
+
+.menu {
+    width: 100%;
+    max-width: 280px;
+}
+
+
+/* =====================================================
+   BOTÕES
+   ===================================================== */
+
+.menu-button {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+    /* Efeito quando passar o mouse */
+
+    .menu-button:hover {
+        background-color: #000000;
+        color: #ffffff;
+        transform: translateY(-3px);
+        box-shadow: 0 7px 18px rgba(0, 0, 0, 0.20);
+    }
+
+
+/* =====================================================
+   ÁREA PRINCIPAL
+   ===================================================== */
+
+.conteudo {
+    width: 75%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 80px 90px;
+}
+
+
+    /* =====================================================
+   TÍTULO PRINCIPAL
+   ===================================================== */
+
+    .conteudo h1 {
+        font-size: 52px;
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 35px;
+        position: relative;
+    }
+
+
+        /* Linha decorativa abaixo do título */
+
+        .conteudo h1::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 5px;
+            background-color: #eca1c4;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+
+    /* =====================================================
+   TEXTOS
+   ===================================================== */
+
+    .conteudo p {
+        max-width: 900px;
+        font-size: 19px;
+        line-height: 1.8;
+        color: #222222;
+        margin-bottom: 25px;
+    }
+
+
+    /* =====================================================
+   TEXTO EM NEGRITO
+   ===================================================== */
+
+    .conteudo strong {
+        color: #000000;
+    }
+
+
+/* =====================================================
+   RESPONSIVIDADE
+   Para tablets
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .portfolio {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 40px 25px;
+    }
+
+    .conteudo {
+        width: 100%;
+        padding: 50px 30px;
+    }
+
+    .menu {
+        max-width: 500px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+   Para celulares
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        padding: 30px 20px;
+    }
+
+    .foto-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .nome {
+        font-size: 21px;
+    }
+
+    .conteudo {
+        padding: 40px 22px;
+    }
+
+        .conteudo h1 {
+            font-size: 38px;
+        }
+
+        .conteudo p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+    .menu-button {
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+/* =====================================================
+   PÁGINA DE GRADUAÇÃO
+   ===================================================== */
+
+.conteudo h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.conteudo h3 {
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+
+/* =====================================================
+   DISCIPLINAS
+   ===================================================== */
+
+.disciplinas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 1000px;
+}
+
+.disciplina {
+    background-color: #f8f8f8;
+    border-left: 5px solid #eca1c4;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 17px;
+    line-height: 1.5;
+    transition: 0.3s;
+}
+
+    .disciplina:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.10);
+        background-color: #ffffff;
+    }
+/* ==================================================
+   CURSOS COMPLEMENTARES
+   ================================================== */
+
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 1000px;
+    margin-bottom: 50px;
+}
+
+.curso {
+    background-color: #f8f8f8;
+    border-left: 5px solid #eca1c4;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 17px;
+    line-height: 1.5;
+    transition: 0.3s;
+}
+
+    .curso:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.10);
+        background-color: #ffffff;
+    }
+
+
+/* ==================================================
+   ÁREAS DE INTERESSE
+   ================================================== */
+
+.interesses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin-bottom: 45px;
+}
+
+.interesse {
+    background-color: #f8f8f8;
+    border-left: 5px solid #eca1c4;
+    padding: 17px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+    .interesse:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.10);
+        background-color: #ffffff;
+    }
+
+
+/* ==================================================
+   RESPONSIVIDADE DOS CURSOS
+   ================================================== */
+
+@media (max-width: 900px) {
+
+    .cursos {
+        grid-template-columns: 1fr;
+    }
+
+    .interesses {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .cursos {
+        gap: 14px;
+    }
+
+    .curso {
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    .interesse {
+        padding: 15px;
+        font-size: 15px;
+    }
+}
+/* ==================================================
+   PÁGINA DE CURSOS - DESIGN PROFISSIONAL
+   ================================================== */
+
+.cursos-page {
+    padding-top: 70px;
+}
+
+
+/* ==================================================
+   CABEÇALHO
+   ================================================== */
+
+.cabecalho-cursos {
+    max-width: 950px;
+    margin-bottom: 35px;
+}
+
+.subtitulo {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #eca1c4;
+    margin-bottom: 12px;
+}
+
+.cabecalho-cursos h1 {
+    margin-bottom: 20px;
+}
+
+.cabecalho-cursos p {
+    max-width: 850px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+/* ==================================================
+   RESUMO
+   ================================================== */
+
+.resumo-cursos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 950px;
+    margin-bottom: 55px;
+}
+
+.resumo-card {
+    background-color: #f8f8f8;
+    border-radius: 14px;
+    padding: 25px;
+    border: 1px solid #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 120px;
+    transition: 0.3s;
+}
+
+    .resumo-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        background-color: #ffffff;
+    }
+
+.resumo-numero {
+    font-size: 30px;
+    font-weight: bold;
+    color: #eca1c4;
+    margin-bottom: 6px;
+}
+
+.resumo-texto {
+    font-size: 15px;
+    color: #333333;
+}
+
+
+/* ==================================================
+   CATEGORIAS
+   ================================================== */
+
+.categoria-cursos {
+    max-width: 1000px;
+    margin-bottom: 55px;
+}
+
+.categoria-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.categoria-icone {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 12px;
+    background-color: #eca1c4;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.categoria-cabecalho h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.categoria-cabecalho p {
+    margin: 6px 0 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+
+/* ==================================================
+   CARDS DOS CURSOS
+   ================================================== */
+
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    max-width: 1000px;
+}
+
+.curso {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-left: 4px solid #eca1c4;
+    padding: 17px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222222;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+    .curso:hover {
+        transform: translateY(-3px);
+        border-color: #eca1c4;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+
+/* ==================================================
+   FINAL DA PÁGINA
+   ================================================== */
+
+.final-cursos {
+    max-width: 1000px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: linear-gradient( 135deg, #f8f8f8 0%, #ffffff 100% );
+    border-radius: 15px;
+    border-left: 5px solid #eca1c4;
+}
+
+    .final-cursos h2 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 25px;
+    }
+
+    .final-cursos p {
+        margin-bottom: 0;
+        max-width: 850px;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+
+/* ==================================================
+   BOTÃO ATIVO
+   ================================================== */
+
+.menu-button.ativo {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+   ================================================== */
+
+@media (max-width: 900px) {
+
+    .resumo-cursos {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .cursos {
+        grid-template-columns: 1fr;
+    }
+
+    .categoria-cabecalho h2 {
+        font-size: 23px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .cursos-page {
+        padding-top: 40px;
+    }
+
+    .cabecalho-cursos p {
+        font-size: 17px;
+    }
+
+    .resumo-card {
+        min-height: 100px;
+        padding: 20px;
+    }
+
+    .resumo-numero {
+        font-size: 26px;
+    }
+
+    .categoria-cabecalho {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .categoria-icone {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 16px;
+    }
+
+    .categoria-cabecalho h2 {
+        font-size: 21px;
+    }
+
+    .categoria-cabecalho p {
+        font-size: 14px;
+    }
+
+    .curso {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    .final-cursos {
+        padding: 22px;
+    }
+}
+/* ==================================================
+   PESQUISA DE CURSOS
+   ================================================== */
+
+.pesquisa-cursos {
+    max-width: 950px;
+    margin-bottom: 50px;
+    padding: 25px;
+    background-color: #f8f8f8;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+}
+
+    .pesquisa-cursos label {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 17px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .pesquisa-cursos input {
+        width: 100%;
+        padding: 16px 18px;
+        border: 2px solid #dddddd;
+        border-radius: 10px;
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 16px;
+        outline: none;
+        transition: 0.3s;
+    }
+
+        .pesquisa-cursos input:focus {
+            border-color: #eca1c4;
+            box-shadow: 0 0 0 3px rgba(236, 161, 196, 0.20);
+        }
+
+        .pesquisa-cursos input::placeholder {
+            color: #888888;
+        }
+
+    .pesquisa-cursos p {
+        margin: 12px 0 0;
+        font-size: 14px;
+        color: #666666;
+    }
+/* ==================================================
+   PÁGINA DE GRADUAÇÃO
+   ================================================== */
+
+.graduacao-page {
+    padding-top: 70px;
+}
+
+.cabecalho-graduacao {
+    max-width: 1000px;
+    margin-bottom: 45px;
+}
+
+    .cabecalho-graduacao h1 {
+        margin-bottom: 18px;
+    }
+
+    .cabecalho-graduacao > p {
+        max-width: 850px;
+        font-size: 18px;
+        line-height: 1.7;
+        margin-top: 18px;
+    }
+
+
+/* STATUS DA GRADUAÇÃO */
+
+.status-graduacao {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #eeeeee;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.status-ponto {
+    width: 9px;
+    height: 9px;
+    background-color: #eca1c4;
+    border-radius: 50%;
+}
+
+
+/* RESUMO */
+
+.resumo-graduacao {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1000px;
+    margin-bottom: 60px;
+}
+
+.info-graduacao {
+    min-height: 120px;
+    padding: 24px;
+    background-color: #f8f8f8;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+    .info-graduacao:hover {
+        transform: translateY(-4px);
+        background-color: #ffffff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+.info-titulo {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888888;
+    margin-bottom: 8px;
+}
+
+.info-graduacao strong {
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+
+/* CONHECIMENTOS */
+
+.conhecimentos-graduacao {
+    max-width: 1000px;
+    margin-bottom: 65px;
+}
+
+    .conhecimentos-graduacao h2 {
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    .conhecimentos-graduacao > p {
+        max-width: 800px;
+        font-size: 17px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+.areas-graduacao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.area-graduacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-left: 4px solid #eca1c4;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+    .area-graduacao:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+.area-icone {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 10px;
+    background-color: #eca1c4;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.area-graduacao strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.area-graduacao p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+
+/* DISCIPLINAS */
+
+.disciplinas-section {
+    max-width: 1000px;
+    margin-bottom: 55px;
+}
+
+.disciplinas-cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 28px;
+}
+
+    .disciplinas-cabecalho h2 {
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+
+.contador-disciplinas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+    .contador-disciplinas strong {
+        font-size: 22px;
+        color: #eca1c4;
+    }
+
+    .contador-disciplinas span {
+        font-size: 14px;
+        color: #555555;
+    }
+
+
+/* MENSAGEM FINAL */
+
+.final-graduacao {
+    max-width: 1000px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+    border-radius: 15px;
+    border-left: 5px solid #eca1c4;
+}
+
+    .final-graduacao h2 {
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .final-graduacao p {
+        max-width: 850px;
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .resumo-graduacao {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .areas-graduacao {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .graduacao-page {
+        padding-top: 40px;
+    }
+
+    .cabecalho-graduacao > p {
+        font-size: 17px;
+    }
+
+    .info-graduacao {
+        min-height: 100px;
+        padding: 20px;
+    }
+
+    .areas-graduacao {
+        gap: 12px;
+    }
+
+    .area-graduacao {
+        padding: 17px;
+    }
+
+    .disciplinas-cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contador-disciplinas {
+        align-self: flex-start;
+    }
+
+    .final-graduacao {
+        padding: 22px;
+    }
+}
+/* ==================================================
+   PÁGINA INICIAL - SOBRE MIM
+   ================================================== */
+
+.inicio-page {
+    padding-top: 70px;
+}
+
+
+/* ==================================================
+   APRESENTAÇÃO
+   ================================================== */
+
+.apresentacao {
+    max-width: 950px;
+    margin-bottom: 45px;
+}
+
+    .apresentacao h1 {
+        margin-bottom: 20px;
+    }
+
+    .apresentacao p {
+        max-width: 850px;
+    }
+
+    .apresentacao .texto-destaque {
+        font-size: 22px;
+        line-height: 1.6;
+        color: #222222;
+    }
+
+
+/* ==================================================
+   RESUMO DO PERFIL
+   ================================================== */
+
+.resumo-perfil {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1000px;
+    margin-bottom: 65px;
+}
+
+.perfil-card {
+    min-height: 135px;
+    padding: 24px;
+    background-color: #f8f8f8;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+    .perfil-card:hover {
+        transform: translateY(-4px);
+        background-color: #ffffff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+.perfil-card-titulo {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #eca1c4;
+    margin-bottom: 9px;
+}
+
+.perfil-card strong {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 7px;
+}
+
+.perfil-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+
+/* ==================================================
+   SEÇÕES DA PÁGINA INICIAL
+   ================================================== */
+
+.secao-inicio {
+    max-width: 1000px;
+    margin-bottom: 65px;
+}
+
+    .secao-inicio .subtitulo {
+        margin-bottom: 10px;
+    }
+
+    .secao-inicio h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .secao-inicio > p {
+        max-width: 850px;
+    }
+
+
+/* ==================================================
+   CONHECIMENTOS
+   ================================================== */
+
+.conhecimentos-inicio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 1000px;
+}
+
+.conhecimento-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-left: 4px solid #eca1c4;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+    .conhecimento-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+.conhecimento-icone {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 11px;
+    background-color: #eca1c4;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.conhecimento-card strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.conhecimento-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+
+/* ==================================================
+   OBJETIVO PROFISSIONAL
+   ================================================== */
+
+.objetivo-inicio {
+    max-width: 1000px;
+    margin-bottom: 45px;
+    padding: 30px;
+    background: linear-gradient( 135deg, #f8f8f8 0%, #ffffff 100% );
+    border-radius: 15px;
+    border-left: 5px solid #eca1c4;
+}
+
+    .objetivo-inicio h2 {
+        margin-top: 0;
+        margin-bottom: 18px;
+    }
+
+    .objetivo-inicio p {
+        max-width: 850px;
+    }
+
+        .objetivo-inicio p:last-child {
+            margin-bottom: 0;
+        }
+
+
+/* ==================================================
+   MENSAGEM FINAL
+   ================================================== */
+
+.final-inicio {
+    max-width: 1000px;
+    margin-bottom: 30px;
+    padding: 25px 30px;
+    border-top: 1px solid #eeeeee;
+}
+
+    .final-inicio strong {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .final-inicio p {
+        margin-bottom: 0;
+        font-size: 16px;
+        color: #666666;
+    }
+
+
+/* ==================================================
+   RESPONSIVIDADE
+   ================================================== */
+
+@media (max-width: 900px) {
+
+    .resumo-perfil {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .conhecimentos-inicio {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .inicio-page {
+        padding-top: 40px;
+    }
+
+    .apresentacao .texto-destaque {
+        font-size: 19px;
+    }
+
+    .perfil-card {
+        min-height: 110px;
+        padding: 20px;
+    }
+
+    .conhecimento-card {
+        padding: 17px;
+    }
+
+    .objetivo-inicio {
+        padding: 22px;
+    }
+
+    .final-inicio {
+        padding: 22px 0;
+    }
+
+        .final-inicio strong {
+            font-size: 18px;
+        }
+}
+
+/* ==================================================
+   EXPERIÊNCIA PROFISSIONAL
+   ================================================== */
+
+.experiencias-profissionais {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 1000px;
+}
+
+.experiencia-card {
+    position: relative;
+    padding: 28px 30px;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-left: 5px solid #eca1c4;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+    .experiencia-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+.experiencia-topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.experiencia-periodo {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #eca1c4;
+}
+
+.experiencia-card h3 {
+    margin: 0 0 6px;
+    font-size: 23px;
+    color: #000000;
+}
+
+.experiencia-card strong {
+    font-size: 15px;
+    color: #555555;
+}
+
+.experiencia-status {
+    padding: 8px 13px;
+    background-color: #f8f8f8;
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555555;
+    white-space: nowrap;
+}
+
+.experiencia-card p {
+    max-width: 900px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+    .experiencia-card p:last-child {
+        margin-bottom: 0;
+    }
+
+
+/* ==================================================
+   EXPERIÊNCIA - CELULAR
+   ================================================== */
+
+@media (max-width: 600px) {
+
+    .experiencia-card {
+        padding: 22px;
+    }
+
+    .experiencia-topo {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .experiencia-status {
+        align-self: flex-start;
+    }
+
+    .experiencia-card h3 {
+        font-size: 21px;
+    }
+
+    .experiencia-card p {
+        font-size: 15px;
+    }
+}
